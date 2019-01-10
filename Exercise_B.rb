@@ -80,7 +80,6 @@ p users["Erik"][:lottery_numbers].min
 
 p users["Avril"][:lottery_numbers].select { |num|  num.even?  }
 
-
   # Erik is one lottery number short! Add the number 7 to be included in his lottery numbers
 
  p users["Erik"][:lottery_numbers].push(7)
@@ -88,12 +87,18 @@ p users["Avril"][:lottery_numbers].select { |num|  num.even?  }
   # Change Erik's hometown to Edinburgh
 
 p users["Erik"][:home_town].replace("Edinburgh")
+# or
+# p users["Erik"][:home_town] = "Edinburgh"
 
   # Add a pet dog to Erik called "Fluffy"
 
-p users["Erik"][:pets].push(:name=>"Fluffy", :species=>"dog")
+p users["Erik"][:pets].push({:name=>"Fluffy", :species=>"dog"})
 
   # Add another person to the users hash
 
-users["John"] = {:home_town => "Stirling"}
+users["John"] = {
+  home_town: "Stirling",
+  twitter: "Jonno",
+  lottery_numbers: [14, 36, 2, 19, 44]
+}
 p users

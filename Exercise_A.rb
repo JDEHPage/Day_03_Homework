@@ -30,14 +30,32 @@ p stops
     # How many stops there are in the array?
 
 p stops.count
+# or
+# p stops.length
 
     # How many ways can we return "Falkirk High" from the array?
 
-
 p stops.at(2)
-p stops.at(-4)
+p stops.at(-5)
 p stops.fetch(2)
-p stops.fetch(-4)
+p stops.fetch(-5)
+# or
+#
+# for start in stops
+#   if station == "Falkirk High"
+#     p station
+#   end
+# end
+#
+# p stops.slice(-5)
+#
+# p stops[2,1].join
+#
+# p stops[2,1].first
+#
+# p stops[2,1].last
+#
+# p stops[2...3].join
 
     # Reverse the positions of the stops in the array
 
